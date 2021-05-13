@@ -1,0 +1,2 @@
+- import web_map.sql
+- open http://localhost/web_map/home/geoJsonImport

@@ -106,8 +106,16 @@
         lat = e.latlng.lat;
         lng = e.latlng.lng;
 
-        console.log(lat, lng);
-        $('#detailModal').modal('show');
+        query = {
+            lat: lat,
+            lng: lng
+        };
+
+        $.getJSON(base_url + "home/getDetails", query, function(data) {
+            $('#detailTitle').html(data.title);
+            $('#detailBody').html(data.body);
+            $('#detailModal').modal('show');
+        });
     }
     </script>
 </body>
