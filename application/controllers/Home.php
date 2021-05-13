@@ -11,10 +11,4 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('v_home');
 	}
-	
-	public function marker_json()
-	{
-		$data=$this->db->get('marker')->result();
-		echo json_encode($data);
-	}
 }

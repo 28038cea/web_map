@@ -80,18 +80,6 @@
         attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
     }).addTo(map);
 
-$.getJSON(base_url+"home/marker_json", function(data){
-    $.each(data, function(i, field){
-    
-      var v_lat=parseFloat(data[i].marker_lat);
-      var v_long=parseFloat(data[i].marker_long);
-
-      L.marker([v_long,v_lat]).addTo(map)
-        .bindPopup(data[i].marker_nama)
-        .openPopup();
-    });
-
-  });
   $.getJSON(base_url+"assets/geojson/map.geojson", function(data){
     geoLayer = L.geoJson(data,{
       style : function(feature) {
