@@ -8,7 +8,7 @@
     <title>Maps error</title>
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <link href="<?=base_url()?>assets/css/BootSideMenu.css" rel="stylesheet">
     <link href="<?=base_url()?>assets/leaflet/leaflet.css" rel="stylesheet">
@@ -48,8 +48,8 @@
     </div>
     <!--Normale contenuto di pagina-->
 
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
     <script src="<?=base_url()?>assets/js/BootSideMenu.js"></script>
     <script src="<?=base_url()?>assets/leaflet/leaflet.js"></script>
 
@@ -84,7 +84,10 @@
     });
 
     function whenClicked(e) {
-        console.log(e);
+        lat = e.latlng.lat;
+        lng = e.latlng.lng;
+
+        console.log(lat, lng);
     }
     </script>
 </body>
