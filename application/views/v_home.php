@@ -92,11 +92,17 @@
       },
         onEachFeature: function(feature, layer){
           var latt = parseFloat(feature.properties.latitude);
+          layer.on({
+            click: whenClicked
+          });
         }
 
       }).addTo(map);
   });
 
+    function whenClicked(e) {
+        console.log(e);
+    }
 
   </script>
 
