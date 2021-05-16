@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,7 +74,7 @@
     <script type="text/javascript">
     $('#test').BootSideMenu({side:"left", autoClose:false});
 
-    var map = L.map('mapid').setView([-8.337392, 115.182068], 13);
+    var map = L.map('mapid').setView([-8.337392, 115.182068], 15);
     var base_url="<?=base_url()?>";
 
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
