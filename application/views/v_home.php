@@ -74,8 +74,18 @@
     <script type="text/javascript">
     $('#test').BootSideMenu({side:"left", autoClose:false});
 
+    $('#detailModal').on('hidden.bs.modal', function () {
+        location.reload();
+    });
+
     var map = L.map('mapid').setView([-8.337392, 115.182068], 15);
     var base_url="<?=base_url()?>";
+
+    // create custom icon
+    iconClicked = L.icon({
+        iconUrl: base_url + 'assets/marker-icon-2x-custom.png'
+    });
+
 
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
         attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
@@ -102,6 +112,8 @@
     });
 
     function whenClicked(e) {
+        this.setIcon(iconClicked);
+
         lat = e.latlng.lat;
         lng = e.latlng.lng;
 
